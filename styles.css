@@ -284,10 +284,10 @@ p {
 /* Trust Bar */
 .trust-bar {
     background: var(--background-alt);
-    padding: 3.45rem 0; /* 3rem * 1.15 */
+    padding: 6rem 0; /* Further increased for more vertical space */
     text-align: center;
     position: relative;
-    z-index: 3; /* Ensure it overlaps any lower sections */
+    z-index: 3;
 }
 
 .trust-text {
@@ -302,7 +302,7 @@ p {
     overflow: hidden;
     width: 100%;
     position: relative;
-    padding: 1.725rem 0; /* 1.5rem * 1.15 */
+    padding: 4rem 0; /* Further increased for a taller belt */
     background: var(--background-alt);
 }
 
@@ -310,7 +310,7 @@ p {
     display: flex;
     width: max-content;
     animation: logos-scroll 40s linear infinite;
-    gap: 2.9rem; /* 2.5rem * 1.15 */
+    gap: 6rem; /* Further increased for more space between logos */
     align-items: center;
 }
 
@@ -324,22 +324,33 @@ p {
 }
 
 .trust-logo-img {
-    height: 55px; /* 48px * 1.15 */
+    height: 110px; /* Further increased logo height */
     width: auto;
-    margin: 0 1.725rem; /* 1.5rem * 1.15 */
+    margin: 0 3.5rem; /* More horizontal space */
     opacity: 0.85;
-    transition: filter 0.3s, opacity 0.3s, transform 0.3s; /* Added transform */
-    background: var(--background); /* Dark background for logos */
+    transition: filter 0.3s, opacity 0.3s, transform 0.3s;
+    background: var(--background);
     border-radius: 0.5rem;
-    padding: 0.575rem 1.15rem; /* 0.5rem * 1.15, 1rem * 1.15 */
+    padding: 1.5rem 2.5rem; /* More padding for larger background */
     box-shadow: var(--shadow);
-    font-size: 1.15rem;
+    font-size: 1.35rem;
 }
 .trust-logo-img:hover {
     filter: none;
     opacity: 1;
     background: var(--primary-dark); /* Highlight on hover */
     transform: translateY(-5px); /* Lift on hover */
+}
+
+@media (max-width: 600px) {
+    .trust-logo-img {
+        height: 70px; /* Larger on mobile too */
+        margin: 0 1.7rem;
+        padding: 0.9rem 1.5rem;
+    }
+    .trust-logos-belt {
+        padding: 2.5rem 0;
+    }
 }
 
 /* Services Section */
